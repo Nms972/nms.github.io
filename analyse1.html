@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Analyse Fonctionnelle et Technique - Images et Métadonnées</title>
+	<meta charset="utf-8"  />
+	<meta name="author" content="nolan" />
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>	
+	<header>
+		<h1>Analyse Fonctionnelle et Technique</h1>
+		<p>Voici l'analyse fonctionnelle et technique de mon projet, elle contient le diagramme UML ainsi que le diagramme de cas d'utilisation.</p>
+	</header>
+	
+	<nav>
+		<h2>Sommaire</h2>
+		<ul>
+			<li><a href="index.html">Accueil</a></li>
+			<li><a href="organisation.html">Organisation du Travail</a></li>
+			<li><a href="analyse2.html">Analyse Critique</a></li>
+			</ul>
+	</nav>	
+	
+	<main>
+	
+	<figure style="text-align: center; margin: 20px 0;">
+		<img src="DiagrammeUML.png" alt="Diagramme UML" style="width: 500px;">
+		<figcaption>Diagramme UML</figcaption>
+	</figure>
+	
+		<section>
+			<h2>Diagramme UML</h2>
+			<p>Le diagramme ci-dessus représente la structure des principales classes de l'application, ainsi que leurs relations. Voici une description des éléments principaux :</p>
+			
+			<p class="mot_cle"> CLIConsole :</p> <p>Cette classe gère l'interaction en ligne de commande avec l'utilisateur. Elle propose des méthodes pour afficher les dossiers, les fichiers, les statistiques, et pour sauvegarder ou comparer des snapshots.</p> 
+
+			<p class="mot_cle">GUI :</p> <p>Classe responsable de l'interface graphique de l'application. Elle contient les méthodes nécessaires pour afficher les fichiers, les images et les métadonnées dans une interface utilisateur, tout en permettant la navigation dans les répertoires et la gestion des snapshots.</p>
+
+			<p class="mot_cle">GUI :</p> <p> Classe responsable de l'interface graphique de l'application. Elle contient les méthodes nécessaires pour afficher les fichiers, les images et les métadonnées dans une interface utilisateur, tout en permettant la navigation dans les répertoires et la gestion des snapshots.</p>
+
+			<p class="mot_cle">Dossier :</p> <p> Représente un dossier contenant des fichiers. Elle inclut des méthodes pour accéder à la liste des fichiers, leurs métadonnées et identifier le type principal de contenu.</p>
+
+			<p class="mot_cle">Dossier :</p> <p> Représente un dossier contenant des fichiers. Elle inclut des méthodes pour accéder à la liste des fichiers, leurs métadonnées et identifier le type principal de contenu.</p>
+
+			<p class="mot_cle">Fichier :</p> <p> Cette classe modélise un fichier individuel. Elle contient des attributs comme le chemin, la taille, et le type de fichier, ainsi qu'une méthode pour récupérer une instance de l'objet Image associée.</p>
+
+			<p class="mot_cle">Image :</p> <p> Classe représentant une image avec des attributs tels que ses dimensions et sa résolution.</p>
+
+			<p class="mot_cle">Snapshot :</p> <p> Représente un état capturé d’un ensemble de fichiers ou d’un dossier à un moment donné. Les snapshots contiennent des métadonnées telles que la date et l’heure de capture.</p>
+
+			<p class="mot_cle">SnapshotStock :</p> <p> Classe qui centralise et gère les snapshots. Elle permet d'ajouter, de sauvegarder, de charger et d'extraire des snapshots au format fichier.</p>
+
+			<p class="mot_cle">Statistique :</p> <p> Cette classe est dédiée à l’analyse des données, comme le nombre total de fichiers et d’images, ainsi que la taille moyenne des fichiers.</p>
+
+			<p class="mot_cle">Métadonnée :</p> <p> Représente des informations supplémentaires associées aux fichiers, telles que l'auteur, la description et les dimensions.</p></p>
+		</section>
+		
+		<figure style="text-align: center; margin: 20px 0;">
+		<img src="DiagrammeCD.png" alt="Diagramme de Cas d'Utilisation" style="width: 500px;">
+		<figcaption>Diagramme de Cas d'Utilisation</figcaption>
+	</figure>
+		<section>
+			<h2>Diagramme de cas d'utilisation</h2>
+			<p>Ce diagramme représente les différentes fonctionnalités de l'application et les interactions avec l'utilisateur. Le diagramme est organisé autour de plusieurs cas d'utilisation, chacun représentant une fonctionnalité ou un objectif que l'utilisateur peut accomplir. Voici les principaux cas d'utilisation :</p>
+
+			<p class="mot_cle">Utilisateur (Acteur principal):</p> <p>L'acteur principal, représenté par un bonhomme est l'Utilisateur. Cet acteur interagit avec l'application pour accomplir diverses tâches.</p>
+
+			<p class="mot_cle">Accéder au dossier :</p> <p> Permet à l'utilisateur d'accéder à un dossier spécifique sur le système de fichiers.</p>
+
+			<p class="mot_cle">Extends :</p> <p> Ce cas inclut plusieurs actions supplémentaires qui peuvent être réalisées une fois que l'utilisateur a accédé au dossier, telles que Extraire des statistiques et Sauvegarder l'état d'un répertoire.</p>
+
+
+			<p class="mot_cle">Accéder au fichier_image :</p> <p class="mot"> L'utilisateur peut accéder à un fichier image spécifique, ce qui déclenche les actions suivantes :</p>		
+			<ul>
+				<li>Afficher l'image : L'image est affichée à l'utilisateur.</li>
+				<li>Afficher les métadonnées : Affichage des informations associées à l'image, comme la taille, le format, etc.</li>
+				<li>Extraire les métadonnées : Permet à l'utilisateur d'extraire des informations détaillées sur l'image, telles que la date de création et d'autres attributs.</li>
+			</ul>
+			
+			<p class="mot">Cas d'utilisation secondaires et extensions :</p>
+			<ul>
+				<li>Lister les fichiers : Affiche une liste de fichiers dans le dossier.</li>
+				<li>Extraire des statistiques : Permet de visualiser des statistiques concernant les fichiers, comme le nombre total d'images ou le nombre d'images par format. Ce cas inclut des actions comme compter le nombre total d'images et Identifier le nombre d'images par format.</li>
+				<li>Rechercher des fichiers : Recherche des fichiers dans un répertoire en fonction de certains critères, incluant des Critères de recherche spécifiques.</li>
+				<li>Miniature : Affiche une miniature d'une image pour faciliter la navigation et l'identification visuelle rapide des fichiers.</li>
+				<li>Zoomer sur une image : Une extension du cas d'utilisation Afficher l'image, permettant à l'utilisateur de zoomer sur l'image pour une vue plus détaillée.</li>
+			</ul>		
+		</section>
+	</main>
+	
+	<footer>
+		<p>Ce projet a été réalisé en 2024-2025 par MARIE-SAINTE Nolan et CHADER Nassim</p>
+	</footer>
+</body>
+</html>

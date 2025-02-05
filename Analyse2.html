@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Analyse Critique - Images et Métadonnées</title>
+	<meta charset="utf-8"  />
+	<meta name="author" content="nolan" />
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>	
+	<header>
+		<h1>Analyse Critique</h1>
+		<p>Ici vous pouvez retrouver les spécificités de notre projet ainsi que les obstacles et les solutions que nous avons trouvé lors de la conception du projet et enfin la conclusion. </p>
+	</header>
+	
+<nav>
+		<h2>Sommaire</h2>
+		<ul>
+			<li><a href="index.html">Accueil</a></li>
+			<li><a href="analyse1.html">Analyse Fonctionnelle et Technique</a></li>
+			<li><a href="organisation.html">Organisation du Travail</a></li>
+			</ul>
+	</nav>	
+	
+	<main>
+	
+		<section>
+			<h2>Spécificités</h2>
+			<p><strong>Bibliothèque pour les métadonnées:</strong> Pour extraire les métadonnées des images, nous avons téléchargé et utilisé des bibliothèques spécifiques sous forme de fichiers JAR. Plus précisément, nous avons intégré metadata-extractor-2.19.0 pour accéder aux métadonnées EXIF des images et deux versions de la bibliothèque XMP (xmp-5.1.3.jar et xmp-6.1.11.jar) pour manipuler les métadonnées au format XMP. Ces bibliothèques ont été ajoutées à notre projet afin d'étendre les capacités de l'application, en nous permettant de lire et de traiter de manière fiable et efficace des informations complexes concernant les images.</p>
+			<p><strong>JavaFX:</strong> Pour l'interface graphique, nous avons utilisé la bibliothèque JavaFX. En intégrant le fichier javafx.jar, nous avons pu concevoir une interface utilisateur interactive qui permet d'afficher et d'interagir avec les fonctionnalités principales de notre application. Cela inclut la possibilité d'afficher les fichiers image, ainsi que d'interagir avec les snapshots via des boutons et d'autres éléments d'interface utilisateur. Cette bibliothèque a permis de rendre l'application plus intuitive et conviviale pour l'utilisateur.</p>
+			<p><strong>SnapshotStock:</strong> Pour gérer une liste de snapshots, nous avons mis en place une classe appelée SnapshotStock. Cette classe est responsable de la gestion des snapshots dans une structure de données ou un répertoire donné. Elle permet d'ajouter des snapshots à une liste, de les récupérer individuellement ou en totalité, et de garantir leur persistance en les sauvegardant dans un fichier snapshots.ser grâce à la sérialisation. En cas de relance du programme, les snapshots peuvent être rechargés depuis ce fichier, ce qui permet de restaurer leur état précédent. Cette classe constitue une solution fiable et structurée pour stocker et manipuler les états sauvegardés de manière persistante.</p>
+			<p><strong>AfficherSnapshot:</strong> Nous avons également développé une méthode intitulée afficherSnapshot qui permet d'avoir une vue visuelle sur les snapshots déjà sauvegardés. Grâce à cette méthode, il est possible de visualiser la date à laquelle les snapshots ont été pris, ainsi que le contenu des fichiers image qui ont été sauvegardés. Cela facilite la gestion et l'analyse des snapshots pour l'utilisateur, en lui offrant une vision claire des différentes versions ou états enregistrés dans l'application.</p>
+			
+			<h2>Obstacles et Solutions</h2>
+			<p>Concernant les obstacles rencontrés, l'extraction des métadonnées a constitué un défi. Après des recherches menées par un camarade et moi, nous avons téléchargé des bibliothèques qui nous ont permis de réaliser l'extraction des métadonnées de manière efficace.</p>
+			<p>De plus, pour la partie snapshot, un problème est survenu lors de la comparaison des snapshots. Face à cette difficulté, un camarade et moi avons créé une méthode afficherSnapshot qui a permis de visualiser les snapshots sauvegardés. Cela nous a permis de constater qu'il y avait un souci de persistance des données. Afin de résoudre ce problème, nous avons utilisé Serializable pour permettre à la classe Snapshot d'être correctement sauvegardée et chargée depuis le fichier. Cette solution a permis de résoudre les problèmes liés à la persistance et à la comparaison des snapshots.</p>
+			
+			<h2>Conclusion</h2>
+			<p>Concernant le niveau d’aboutissement du projet, en mode CLI, nous avons réussi à implémenter plusieurs fonctionnalités clés. Nous avons pu lister les fichiers d'un répertoire et afficher les statistiques associées. De plus, nous avons ajouté la possibilité de sauvegarder l’état d’un répertoire et de le comparer avec son état actuel, permettant ainsi de détecter toute modification du répertoire. Nous avons également implémenté une fonctionnalité pour afficher les statistiques d’un fichier et, grâce à des bibliothèques externes comme metadata-extractor, nous avons développé une méthode permettant d'extraire les métadonnées d’une image. Enfin, nous avons généré un fichier JAR et une documentation Javadoc à l'aide des outils d'Eclipse, ce qui a permis de structurer et de partager notre projet de manière professionnelle.
+Pour le mode GUI, nous avons repris les mêmes fonctionnalités que celles du mode CLI avec une interface graphique permettant à l'utilisateur d'interagir plus facilement avec l'application. Concernant les points forts tout fonctionne correctement excepter le mode recherche dans CLI.</p>
+
+		</section>
+		
+	</main>
+	
+	<footer>
+		<p>Ce projet a été réalisé en 2024-2025 par MARIE-SAINTE Nolan et CHADER Nassim</p>
+	</footer>
+</body>
+</html>

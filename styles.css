@@ -1,0 +1,66 @@
+h1 {
+	color: black;
+	font-family: courier, fixed, monospace;
+	font-size: 50px;
+	text-align: center;
+	text-decoration: underline;
+}
+
+p.pre {
+	text-align: center;
+	color: #333333;
+}
+
+h2 {
+	font-family: fantasy;
+}
+
+nav {
+	text-align: center;
+}
+nav ul li {
+	display: inline;
+	margin-right: 20px;
+}
+nav ul li a {
+	text-decoration: none;
+	color: #333333;
+	font-weight: bold;
+}
+nav ul li a:hover {
+	color: brown;
+}
+
+body {
+	font-family: arial, helvetica, sans-serif;
+	background-color: #C8AD7F;
+	color: #333333;
+	line-height: 1.6;
+	padding: 20px;
+}	
+
+footer {
+	text-align: right;
+}
+
+figcaption {
+	font-family: courier, fixed, monospace;
+	font-size: 20px; 
+}
+
+p.mot_cle {
+	font-weight: bold;
+}
+
+p.mot {
+	text-decoration: underline;
+}
+
+p {
+	text-indent: 20px;
+}
+
+
+ul li {
+	font-style: italic;
+}
